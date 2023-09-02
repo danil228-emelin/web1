@@ -1,8 +1,9 @@
 
-.header{
-    background: darkmagenta;
+.header {
+    /*background: darkmagenta;*/
     display: flex;
     flex-direction: column;
+    background-color: darkmagenta;
     gap: 10px;
     height: 70px;
     width: 500px;
@@ -10,18 +11,24 @@
     text-align: center;
 }
 
-.input {
-    background-color: darkmagenta;
+.left_side {
+
     display: flex;
-    height: 600px;
-    width: 1200px;
     flex-direction: column;
-    gap: 70px;
+    margin-right: 200px;
+    padding: 50px;
 }
 
-.y {
-    width: 70px;
+.right_side {
 }
+.main_container{
+    display: flex;
+    gap: 150px;
+    background-color: darkmagenta;
+    padding: 5px;
+
+}
+
 
 .choices_x {
     display: flex;
@@ -30,56 +37,47 @@
 
 }
 
-.header_x {
-    justify-content: center;
-    display: flex;
-}
-.header_y {
-    justify-content: center;
-    display: flex;
-}
+
 
 
 .x {
-    gap: 3px;
-    width: 50px;
-    height: 50px;
+
     display: flex;
-    flex-direction: column;
+    align-items: center;
 
 }
 
 .y {
     display: flex;
-    flex-direction: column;
+    gap: 105px;
+    flex-direction: row;
+}
+#name{
     width: 50px;
-    height: 50px;
+
+    margin: 9px;
 }
 
-.header_z {
-    justify-content: left;
-    display: flex;
 
-}
 
 .z {
     display: flex;
-    flex-direction: column;
-    width: 50px;
-    height: 50px;
+    align-items: center;
+    gap: 110px;
 }
 
 .buttons {
     display: flex;
-    flex-direction: row;
     gap: 10px;
 }
-.photo{
+
+.photo {
     display: flex;
     flex-direction: column;
     align-items: end;
     gap: 10px;
 }
+
 .centered_container {
     gap: 50px;
     display: flex;
