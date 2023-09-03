@@ -21,39 +21,39 @@
                 </div>
                 <div class="choices_x">
                     <div>
-                        <input type="checkbox" id="n_three" name="n_three" checked/>
+                        <input type="checkbox" id="n_three" name="num" value="-3" />
                         <label for="n_three">-3</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="n_two" name="n_two" checked/>
+                        <input type="checkbox" id="n_two" name="num"  value="-2" />
                         <label for="n_two">-2</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="n_one" name="n_one" checked/>
+                        <input type="checkbox" id="n_one" name="num" value="-1" />
                         <label for="n_one">-1</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="zero" name="zero" checked/>
+                        <input type="checkbox" id="zero" name="num" value="0" />
                         <label for="zero">0</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="p_one" name="p_one" checked/>
+                        <input type="checkbox" id="p_one" name="num" value="1" />
                         <label for="p_one">1</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="p_two" name="p_two" checked/>
+                        <input type="checkbox" id="p_two" name="num" value="2" />
                         <label for="p_two">2</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="p_three" name="p_three" checked/>
+                        <input type="checkbox" id="p_three" name="num" value="3" />
                         <label for="p_three">3</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="p_four" name="p_four" checked/>
+                        <input type="checkbox" id="p_four" name="num" value="4" />
                         <label for="p_four">4</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="p_five" name="p_five" checked/>
+                        <input type="checkbox" id="p_five" name="num" value="5" />
                         <label for="p_five">5</label>
                     </div>
                 </div>
@@ -62,8 +62,8 @@
                 <div class="header_y">
                     <p>Y</p>
                 </div>
-                <div>
-                    <input title="Write value between -5 and 3" type="text" id="name" required minlength="1"
+                <div class="input_y">
+                    <input title="Write value between -5 and 3" type="text" id="name" name="input_y" required minlength="1"
                            maxlength="2"/>
                 </div>
             </div>
@@ -73,11 +73,11 @@
                     <p>Z</p>
                 </div>
                 <div class="buttons">
-                    <button type="button">1</button>
-                    <button type="button">1.5</button>
-                    <button type="button">2</button>
-                    <button type="button">2.5</button>
-                    <button type="button">4</button>
+                    <button type="button" class="b" value="1">1</button>
+                    <button type="button" class="b" value="1.5">1.5</button>
+                    <button type="button" class="b" value="2">2</button>
+                    <button type="button" class="b" value="2.5">2.5</button>
+                    <button type="button" class="b" value="4">4</button>
                 </div>
             </div>
 
@@ -89,4 +89,5 @@
     </div>
 </div>
 </body>
+<script src="/scripts/script.js"></script>
 </html>
