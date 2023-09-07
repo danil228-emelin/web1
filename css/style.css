@@ -87,7 +87,7 @@
 }
 
 .table_result {
-    background: gold;
+    background: #d000ff;
     width: 350px;
 }
 
@@ -166,6 +166,14 @@ input:checked + label {
 }
 .choices_x .round {
     position: relative;
+}
+.ass{
+    display: flex;
+}
+.table_result{
+
+    max-height: 150px;
+    overflow: auto;
 }
 
 

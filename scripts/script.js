@@ -2,6 +2,7 @@ const buttons = document.querySelectorAll("button[class=b]");
 const checkBoxes = document.querySelectorAll("input[name=num]");
 const inputY = document.querySelector("input[type=text]");
 const SEND_BUTTON = document.querySelector("button[name=send]")
+const CLEAR_BUTTON = document.querySelector("button[id=clearing]")
 const LEFT_BORDER = -5;
 const RIGHT_BORDER = 3;
 const table = document.getElementById("results");
@@ -9,7 +10,13 @@ let r = null;
 let x = null;
 let y = null;
 const REQ_INT = new RegExp('^-?[0-5]*$')
-
+buttons.forEach(b=>{
+    b.addEventListener('click',(e)=>{
+      buttons.forEach(b=>
+      b.style.color='white')
+       b.style.color='red';
+    })
+})
 addEventListener("load", () => {
     inputY.value = "";
     checkBoxes.forEach(box => {
@@ -112,4 +119,8 @@ function msToTime(duration) {
 
     return hours + ":" + minutes + ":" + seconds + "." + milliseconds;
 }
+
+CLEAR_BUTTON.addEventListener('click',()=>{
+    $("#results").find("tr:gt(0)").remove();
+})
 
