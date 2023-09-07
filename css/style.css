@@ -21,7 +21,8 @@
 
 .right_side {
 }
-.main_container{
+
+.main_container {
     display: flex;
     gap: 150px;
     background-color: darkmagenta;
@@ -38,8 +39,6 @@
 }
 
 
-
-
 .x {
 
     display: flex;
@@ -52,15 +51,15 @@
     gap: 105px;
     flex-direction: row;
 }
-#name{
+
+#name {
     width: 50px;
 
     margin: 9px;
 }
 
 
-
-.z {
+.r {
     display: flex;
     align-items: center;
     gap: 110px;
@@ -86,4 +85,11 @@
     background-color: darkslateblue;
     align-items: center;
 }
+.table_result{
+background: gold;
+    width: 350px;
+}
+#results {
 
+    width: 350px;
+}
