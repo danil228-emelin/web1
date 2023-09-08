@@ -91,7 +91,40 @@
 
         </div>
         <div class="photo right_side">
-            <img src="image/img.png" alt="Graphic">
+            <svg class="field" width="500" height="500">
+                <!-- Фигуры -->
+                <polygon points="250,250 352,250 250,350" fill="cyan" stroke="cyan"></polygon>
+                <polygon points="250,250 50,250 50,450 248,450" fill="cyan" stroke="cyan"></polygon>
+                <path d="M 250,250  L 50,250 A 180,180 0 0 ,1  250,50 Z" fill="cyan" stroke="cyan"></path>
+                <!-- Линии и отметки -->
+                <line stroke="black" x1="0" x2="500" y1="250" y2="250"></line>
+                <line stroke="black" x1="250" x2="250" y1="0" y2="500"></line>
+
+                <line stroke="black" x1="50" x2="50" y1="246" y2="254"></line>
+                <line stroke="black" x1="150" x2="150" y1="246" y2="254"></line>
+                <line stroke="black" x1="350" x2="350" y1="246" y2="254"></line>
+                <line stroke="black" x1="450" x2="450" y1="246" y2="254"></line>
+
+                <line stroke="black" x1="246" x2="254" y1="50" y2="50"></line>
+                <line stroke="black" x1="246" x2="254" y1="150" y2="150"></line>
+                <line stroke="black" x1="246" x2="254" y1="350" y2="350"></line>
+                <line stroke="black" x1="246" x2="254" y1="450" y2="450"></line>
+
+                <!-- Стрелки -->
+                <polygon points="250,0 254,25 246,25" fill="black" stroke="black"></polygon>
+                <polygon points="500,250 475,254 475,246" fill="black" stroke="black"></polygon>
+
+                <!-- Значение отметок -->
+                <text x="40" y="240" fill="black">-R</text>
+                <text x="135" y="240" fill="black">-R/2</text>
+                <text x="340" y="240" fill="black">R/2</text>
+                <text x="445" y="240" fill="black">R</text>
+
+                <text x="260" y="55" fill="black">R</text>
+                <text x="260" y="155" fill="black">R/2</text>
+                <text x="260" y="355" fill="black">-R/2</text>
+                <text x="260" y="455" fill="black">-R</text>
+            </svg>
             <button type="button" name="send">send</button>
         </div>
     </div>
@@ -115,12 +148,9 @@
             <button type="button" id="clearing">clear</button>
         </div>
     </div>
-
-
 </div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="/scripts/script.js"></script>
-</body>
 
+</body>
 </html>
