@@ -1,15 +1,18 @@
 
 .header {
+
     /*background: darkmagenta;*/
     display: flex;
     flex-direction: column;
-    background-color: darkmagenta;
+    background-image: linear-gradient(to bottom right, #305170, #6DFC6B);
     gap: 10px;
     height: 70px;
     width: 500px;
     padding: 5px;
     text-align: center;
+
 }
+
 
 .left_side {
 
@@ -23,9 +26,10 @@
 }
 
 .main_container {
+
     display: flex;
     gap: 150px;
-    background-color: darkmagenta;
+    background-image: linear-gradient(to bottom right, #38A2D7, #561139);
     padding: 5px;
 
 }
@@ -82,7 +86,7 @@
     display: flex;
     flex-direction: column;
     height: 950px;
-    background-color: darkslateblue;
+    background-image: linear-gradient(to bottom right, #0350f5, #FB36F4);
     align-items: center;
 }
 
@@ -96,7 +100,7 @@
     width: 350px;
 }
 
-button.b {
+button {
     padding: 0.6em 2em;
     border: none;
     outline: none;
@@ -111,14 +115,14 @@ button.b {
     touch-action: manipulation;
 }
 
-button.b:before {
+button:before {
     content: "";
     background: linear-gradient(
             45deg,
             #ff9100,
             #005eff,
-            #fffb00,
-            #48ff00,
+            #dad915,
+            #42ff10,
             #00ffd5,
             #002bff,
             #7a00ff,
@@ -151,7 +155,7 @@ button.b:before {
     }
 }
 
-button.b:active {
+button:active {
     transform: translateY(4px);
     /* Moving button 4px to y-axis */
 }
@@ -161,17 +165,21 @@ input:checked {
     border: none;
     outline: 2px solid #c414ff;
 }
+
 input:checked + label {
     color: #ee00ff;
 }
+
 .choices_x .round {
     position: relative;
 }
-.ass{
-    display: flex;
-}
-.table_result{
 
+.ass {
+    display: flex;
+    gap: 10px;
+}
+
+.table_result {
     max-height: 150px;
     overflow: auto;
 }
