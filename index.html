@@ -11,13 +11,13 @@
     </style>
 </head>
 <body>
-
+<div class="header">
+    <span>Danil Emelin</span>
+    <span>Group-P3208</span>
+    <span>Variant-1804</span>
+</div>
 <div class="centered_container">
-    <div class="header">
-        <span>Danil Emelin</span>
-        <span>Group-P3208</span>
-        <span>Variant-1804</span>
-    </div>
+
     <div class="main_container">
         <div class="left_side">
             <div class="x">
@@ -68,11 +68,10 @@
                     <p>Y</p>
                 </div>
                 <div class="input_y">
-                    <input title="Write value between -5 and 3" type="text" id="name" name="input_y" required
+                    <input title="Write value between -5 and 3" type="text" inputmode="numeric" pattern="(-\d+)|(\d*)|(\d*\.\d+)|(-\d+.\d+)" id="name" name="input_y"
                            placeholder="Enter y value [-5; 3]"
-                           minlength="1"
-                           maxlength="2"
-                           style="width: 120px"/>
+                           maxlength="5"
+                           style="width: 152px"/>
                 </div>
             </div>
 
@@ -149,7 +148,7 @@
         </div>
     </div>
 </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="/scripts/script.js"></script>
 
 </body>

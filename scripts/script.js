@@ -9,9 +9,9 @@ const table = document.getElementById("results");
 let r = null;
 let x = null;
 let y = null;
-const REQ_INT = new RegExp('^-?[0-5]*$')
+
 buttons.forEach(b=>{
-    b.addEventListener('click',(e)=>{
+    b.addEventListener('click',()=>{
       buttons.forEach(b=>
       b.style.color='white')
        b.style.color='red';
@@ -31,10 +31,7 @@ inputY.addEventListener('input', () => {
     if (res === "") {
         return;
     }
-    if (!REQ_INT.test(res)) {
-        inputY.value = "";
-        alert(res.concat(" :incorrect Input for y"));
-    }
+
     if (res < LEFT_BORDER || res > RIGHT_BORDER) {
         alert("value ".concat(res).concat(" out of range"));
         inputY.value = "";
@@ -77,12 +74,11 @@ SEND_BUTTON.addEventListener('click', () => {
             alert("Fill parameter y")
             return;
         }
-
-        $.post("\\scripts\\script.php", {
+ let   currentTime= msToTime(Date.now())
+            $.post("\\scripts\\script.php", {
                 x: x,
                 y: y,
-                r: r,
-                currentTime: msToTime(Date.now())
+                r: r
             },
             (result) => {
                 let json = JSON.parse(result)
@@ -95,7 +91,7 @@ SEND_BUTTON.addEventListener('click', () => {
                 let cell5 = row.insertCell(4);
                 let cell6 = row.insertCell(5);
                 cell1.innerHTML = json.boolean;
-                cell2.innerHTML = json.request_time;
+                cell2.innerHTML = currentTime
                 cell3.innerHTML =json.response_time;
                 cell4.innerHTML =json.x;
                 cell5.innerHTML =json.y;
