@@ -170,7 +170,7 @@ input:checked + label {
     margin: 0;
 }
 .table_result {
-    max-height: 150px;
+    max-height: 300px;
     overflow: auto;
 }
 table, th, td {

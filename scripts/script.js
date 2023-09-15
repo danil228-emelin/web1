@@ -20,7 +20,7 @@ function saveTableInLocalStorage() {
         return;
     }
     let rows = table.rows;
-    for (let i = 1; i < rows.length && i< MAX_ROWS_SAVED; i++) {
+    for (let i = 1; i < rows.length && i < MAX_ROWS_SAVED; i++) {
         let inRange = table.rows[i].cells[0].innerHTML
         let requestTime = table.rows[i].cells[1].innerHTML
         let responseTime = table.rows[i].cells[2].innerHTML
@@ -74,18 +74,19 @@ addEventListener("load", () => {
     x = null;
     y = null;
 })
-inputY.addEventListener('input', () => {
+inputY.addEventListener('input', (element) => {
+    const isValid = element.target.checkValidity();
     let res = inputY.value
-    if (res === "") {
+    if (!isValid) {
         return;
     }
-
     if (res < LEFT_BORDER || res > RIGHT_BORDER) {
-        alert("value ".concat(res).concat(" out of range"));
-        inputY.value = "";
+        alert(res.concat(" wrong value for y"));
+        inputY.value="";
+        return;
     }
-    y = inputY.value;
-    console.log("y=".concat(y))
+    y = parseFloat(res);
+
 
 })
 
@@ -123,7 +124,7 @@ SEND_BUTTON.addEventListener('click', () => {
         return;
     }
     let currentTime = new Date()
-        .toLocaleString("ru-RU", {timeZone: "Europe/Moscow",hour:"numeric",minute:"numeric",second:"numeric"})
+        .toLocaleString("ru-RU", {timeZone: "Europe/Moscow", hour: "numeric", minute: "numeric", second: "numeric"})
 
 
     $.post("\\scripts\\script.php", {
@@ -147,8 +148,6 @@ SEND_BUTTON.addEventListener('click', () => {
     })
 
 })
-
-
 
 
 CLEAR_BUTTON.addEventListener('click', () => {
