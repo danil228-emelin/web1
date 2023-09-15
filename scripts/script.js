@@ -122,7 +122,8 @@ SEND_BUTTON.addEventListener('click', () => {
         alert("Fill parameter y")
         return;
     }
-    let currentTime = msToTime(Date.now())
+    let currentTime = new Date()
+        .toLocaleString("ru-RU", {timeZone: "Europe/Moscow",hour:"numeric",minute:"numeric",second:"numeric"})
 
 
     $.post("\\scripts\\script.php", {
@@ -148,16 +149,7 @@ SEND_BUTTON.addEventListener('click', () => {
 })
 
 
-function msToTime(duration) {
-    let milliseconds = Math.floor((duration % 1000) / 100), seconds = Math.floor((duration / 1000) % 60),
-        minutes = Math.floor((duration / (1000 * 60)) % 60), hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
 
-    hours = (hours < 10) ? "0" + hours : hours;
-    minutes = (minutes < 10) ? "0" + minutes : minutes;
-    seconds = (seconds < 10) ? "0" + seconds : seconds;
-
-    return hours + ":" + minutes + ":" + seconds + "." + milliseconds;
-}
 
 CLEAR_BUTTON.addEventListener('click', () => {
     $("#results").find("tr:gt(0)").remove();

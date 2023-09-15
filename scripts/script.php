@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Europe/Moscow');
 $x = $_POST['x'];
 $y = $_POST['y'];
 $r = $_POST['r'];
