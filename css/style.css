@@ -185,3 +185,14 @@ input[inputmode="numeric"]:invalid {
     outline: 2px solid red;
 
 }
+.field{
+    transform: scale(0.7);
+}
+#button_send{
+  margin-top: 10px;
+    margin-left: 115px;
+}
+#clearing{
+  margin-left: 200px;
+    margin-top: -19.5px;
+}
