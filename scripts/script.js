@@ -75,16 +75,17 @@ addEventListener("load", () => {
     y = null;
 })
 inputY.addEventListener('input', (element) => {
+    element.target.setCustomValidity("");
     const isValid = element.target.checkValidity();
     let res = inputY.value
     if (!isValid) {
         return;
     }
     if (res < LEFT_BORDER || res > RIGHT_BORDER) {
-        alert(res.concat(" wrong value for y"));
-        inputY.value="";
+        element.target.setCustomValidity("Invalid field.")
         return;
     }
+
     y = parseFloat(res);
 
 
